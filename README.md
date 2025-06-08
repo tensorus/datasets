@@ -1,30 +1,36 @@
 # datasets
 
-A repository for storing datasets and related resources used in experiments and tutorials. This project houses both real and synthetic data along with notebooks and helper scripts.
+This repository stores datasets and related resources for experiments and tutorials. It contains curated real-world data, synthetic examples, Jupyter notebooks, and helper scripts.
 
-## Repository Layout
+## Repository Purpose
+
+The goal is to provide a centralized location for datasets used in demos or research. Datasets are organized to keep real data separate from generated examples while also tracking notebooks and scripts that operate on them.
+
+## Dataset Organization
 
 ```
 data/
-├── real_world/    # real data collected from various sources
-└── synthetic/     # generated datasets for testing and examples
-notebooks/         # exploratory notebooks
-scripts/           # data processing utilities
+├── real_world/    # datasets collected from external sources
+└── synthetic/     # generated data and templates
+notebooks/         # exploration and analysis notebooks
+scripts/           # utilities for generation or preprocessing
 ```
 
 ## Git LFS
 
-Large dataset files should be managed with [Git LFS](https://git-lfs.com/).
-Install Git LFS **before cloning** this repository so that large files are
-fetched correctly. After installing it on your machine, run:
+Large dataset files should be stored with [Git LFS](https://git-lfs.com/). Install Git LFS **before cloning** so binary files are fetched correctly:
 
 ```bash
 git lfs install
-# Track large file types, for example
+```
+
+Track new file types as needed. For example:
+
+```bash
 git lfs track "*.csv"
 ```
 
-Commit the resulting `.gitattributes` file so that large data is stored efficiently.
+Commit the resulting `.gitattributes` file along with your data. If you clone after enabling LFS, run `git lfs pull` to download the tracked content.
 
 ## License
 
