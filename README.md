@@ -30,6 +30,12 @@ Track new file types as needed. For example:
 git lfs track "*.csv"
 ```
 
+This repository tracks common dataset formats with LFS:
+
+```bash
+git lfs track "*.zarr" "*.h5" "*.npz" "*.safetensors"
+```
+
 Commit the resulting `.gitattributes` file along with your data. If you clone after enabling LFS, run `git lfs pull` to download the tracked content.
 
 ## License
