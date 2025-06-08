@@ -17,7 +17,8 @@
     - `simulation_data`: A 5D tensor of shape `(5, 6, 6, 3, 2)`, representing higher-dimensional data.
 - **Generation Steps**:
     1. Navigate to the root of the repository.
-    2. Run the command: `python scripts/generate_tensors.py data/synthetic/demo_tensors`
+    2. Run the command: `python scripts/generate_tensors.py data/synthetic/demo_tensors --seed 123`
+       (the `--seed` option ensures deterministic output; omit it for random data)
     3. This will create/overwrite `data/synthetic/demo_tensors/demo_tensors.h5` with all the listed tensors.
 
 ## Setup and Usage
