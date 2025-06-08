@@ -5,14 +5,19 @@ import numpy as np
 import h5py
 
 
-def generate_tensors(output_dir: Path) -> None:
+def generate_tensors(output_dir: Path, seed: int | None = None) -> None:
     """Generate example tensors and save them to ``output_dir`` as ``demo_tensors.h5``.
 
     Parameters
     ----------
     output_dir : Path
         Directory where the tensor file will be written.
+    seed : int, optional
+        Random seed passed to ``numpy.random.seed`` for deterministic output.
     """
+    if seed is not None:
+        np.random.seed(seed)
+
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / "demo_tensors.h5"
 
@@ -56,8 +61,9 @@ def generate_tensors(output_dir: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate demo tensor dataset in HDF5 format")
     parser.add_argument("output_dir", type=Path, help="Directory to write dataset")
+    parser.add_argument("--seed", type=int, default=None, help="Optional random seed for reproducible output")
     args = parser.parse_args()
-    generate_tensors(args.output_dir)
+    generate_tensors(args.output_dir, seed=args.seed)
 
 
 if __name__ == "__main__":
