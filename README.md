@@ -15,6 +15,8 @@ data/
 notebooks/         # exploration and analysis notebooks
 scripts/           # utilities for generation or preprocessing
 ```
+Executed notebooks (e.g., `demo_tensors.executed.ipynb`) are not tracked. Run the clean notebook to reproduce outputs.
+
 
 ## Git LFS
 
