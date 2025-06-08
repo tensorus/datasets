@@ -15,8 +15,9 @@ Thank you for considering a contribution to this dataset repository. This projec
 ## Adding a Synthetic Dataset or Generator
 
 1. Place generated datasets in `data/synthetic/<dataset-name>`.
-2. If adding a generator script, put it under `scripts/` or a subdirectory.
-3. Provide the same `metadata.yaml` with the required fields listed above describing how the data is produced.
+2. Copy the template at `data/synthetic/template_dataset/` as a starting point and fill in the placeholders.
+3. If adding a generator script, put it under `scripts/` or a subdirectory.
+4. Provide the same `metadata.yaml` with the required fields listed above describing how the data is produced.
 
 ## Commit Hygiene
 
