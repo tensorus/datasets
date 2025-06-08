@@ -43,3 +43,11 @@ Commit the resulting `.gitattributes` file along with your data. If you clone af
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Dashboard
+
+A Streamlit dashboard is included for exploring the datasets interactively. Launch it with:
+
+```bash
+streamlit run scripts/dashboard.py
+```
