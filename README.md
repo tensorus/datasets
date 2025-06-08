@@ -15,7 +15,8 @@ scripts/           # data processing utilities
 ## Git LFS
 
 Large dataset files should be managed with [Git LFS](https://git-lfs.com/).
-After installing it on your machine, run:
+Install Git LFS **before cloning** this repository so that large files are
+fetched correctly. After installing it on your machine, run:
 
 ```bash
 git lfs install
